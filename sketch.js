@@ -15,30 +15,30 @@ var gameOver, restart;
 
 
 function preload(){
-  jumpSound = loadSound("assets/sounds/jump.wav")
-  collidedSound = loadSound("assets/sounds/collided.wav")
+  jumpSound = loadSound("jump.wav")
+  collidedSound = loadSound("collided.wav")
   
-  backgroundImg = loadImage("assets/backgroundImg.png")
-  sunAnimation = loadImage("assets/sun.png");
+  backgroundImg = loadImage("backgroundImg.png")
+  sunAnimation = loadImage("sun.png");
   
-  trex_running = loadAnimation("assets/trex_2.png","assets/trex_1.png","assets/trex_3.png");
-  trex_collided = loadAnimation("assets/trex_collided.png");
+  trex_running = loadAnimation("trex_2.png","trex_1.png","trex_3.png");
+  trex_collided = loadAnimation("trex_collided.png");
   
-  groundImage = loadImage("assets/ground.png");
+  groundImage = loadImage("ground.png");
   
-  cloudImage = loadImage("assets/cloud.png");
+  cloudImage = loadImage("cloud.png");
   
-  obstacle1 = loadImage("assets/obstacle1.png");
-  obstacle2 = loadImage("assets/obstacle2.png");
-  obstacle3 = loadImage("assets/obstacle3.png");
-  obstacle4 = loadImage("assets/obstacle4.png");
+  obstacle1 = loadImage("obstacle1.png");
+  obstacle2 = loadImage("obstacle2.png");
+  obstacle3 = loadImage("obstacle3.png");
+  obstacle4 = loadImage("obstacle4.png");
   
-  gameOverImg = loadImage("assets/gameOver.png");
-  restartImg = loadImage("assets/restart.png");
+  gameOverImg = loadImage("gameOver.png");
+  restartImg = loadImage("restart.png");
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth,windowHeight);
   
   sun = createSprite(width-50,100,10,10);
   sun.addAnimation("sun", sunAnimation);
@@ -61,7 +61,7 @@ function setup() {
   ground.x = width/2
   ground.velocityX = -(6 + 3*score/100);
   
-  gameOver = createSprite(width/2,height/2- 50);
+  gameOver = createSprite(width/2,height/2-50);
   gameOver.addImage(gameOverImg);
   
   restart = createSprite(width/2,height/2);
